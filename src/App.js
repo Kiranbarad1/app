@@ -7,7 +7,7 @@ function App() {
   const [name, setname] = useState('');
   const [R, setR] = useState('');
   const Likita =['7v fail', 'Anpadh','cat','gundamma','lier','dumb']
-  const Kiran =['creator','one above all']
+  const Kiran =['creator','one above all','single peice in world']
   const Other =['kind', 'innocent','humbal','buddy','stupid guy','topper','losser','useless',]
 
 
@@ -24,7 +24,7 @@ function App() {
   // }
   const DataAdd =(e)=>{
     
-    if (name === 'likita') {
+    if (name.toUpperCase() === 'LIKITA') {
     
       setR(
         Likita[Math.floor(Math.random() * Likita.length)]
