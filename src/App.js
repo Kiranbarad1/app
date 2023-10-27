@@ -1,58 +1,87 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React, { useState } from 'react';
+import styled from 'styled-components';
+
 
 function App() {
+  
+  const [name, setname] = useState('');
+  const [R, setR] = useState('');
+  const Likita =['7v fail', 'Anpadh','cat','gundamma','lier','dumb']
+  const Kiran =['creator','one above all']
+  const Other =['kind', 'innocent','humbal','buddy','stupid guy','topper','losser','useless',]
+
+
+  const data =(e)=>{
+   setname(e.target.value)
+   console.log(name);
+          
+  }
+  const DataClear =(e)=>{
+    setR('')
+  
+    setname('')
+          
+  }
+  const DataAdd =(e)=>{
+    
+    if (name === 'likita') {
+      setR('')
+      setR(
+        Likita[Math.floor(Math.random() * Likita.length)]
+      )
+    
+    }
+    else if(name==='kiran'){
+      
+      setR(
+        Kiran[Math.floor(Math.random() * Kiran.length)]
+      )
+    }
+    else if(name === ''){
+      alert('enter name')
+     
+    }
+    else{
+      setR(
+       Other[Math.floor(Math.random() * Other.length)]
+      )
+    }
+
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <Division>
+      <Input>
+     <Take type="text"  onChange={data}/>
+      </Input>
+      <h1>{name}</h1>
+      <Send>
+     <button onClick={DataAdd}>send</button>
+      </Send>
+      <Clear>
+     <button onClick={DataClear}>clear</button>
+      </Clear>
+
+     {/* <h1>{Rname}</h1> */}
+ 
+     <h1>{R}</h1>
+     
+    </Division>
   );
 }
 
 export default App;
+const Division=styled.div`
+  
+`
+const Clear=styled.section`
+  
+`
+const Take=styled.input`
+  
+`
+const Send=styled.section`
+  
+`
+const Input=styled.section`
+  
+`
