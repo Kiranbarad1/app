@@ -16,12 +16,12 @@ function App() {
    console.log(name);
           
   }
-  const DataClear =(e)=>{
-    setR('')
+  // const DataClear =(e)=>{
+  //   setR('')
   
-    setname('')
+  //   setname('')
           
-  }
+  // }
   const DataAdd =(e)=>{
     
     if (name === 'likita') {
@@ -57,9 +57,9 @@ function App() {
       <Send>
      <button onClick={DataAdd}>send</button>
       </Send>
-      <Clear>
+      {/* <Clear>
      <button onClick={DataClear}>clear</button>
-      </Clear>
+      </Clear> */}
 
      {/* <h1>{Rname}</h1> */}
  
