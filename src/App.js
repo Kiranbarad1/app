@@ -25,7 +25,7 @@ function App() {
   const DataAdd =(e)=>{
     
     if (name === 'likita') {
-      setR('')
+    
       setR(
         Likita[Math.floor(Math.random() * Likita.length)]
       )
@@ -53,7 +53,7 @@ function App() {
       <Input>
      <Take type="text"  onChange={data}/>
       </Input>
-      <h1>{name}</h1>
+      
       <Send>
      <button onClick={DataAdd}>send</button>
       </Send>
