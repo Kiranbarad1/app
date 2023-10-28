@@ -31,7 +31,7 @@ function App() {
       )
     
     }
-    else if(name.toUpperCase()==='kiran'){
+    else if(name.toUpperCase()==='KIRAN'){
       
       setR(
         Kiran[Math.floor(Math.random() * Kiran.length)]
