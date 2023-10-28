@@ -49,28 +49,31 @@ function App() {
 
   }
   return (
-    <Division>
+ 
+
+    <div style={{
+      display:'flex',
+      alignItems:'center',
+      justifyContent:'center',
+      flexDirection:'column',
+      
+    }}>
       <Input>
      <Take type="text"  onChange={data}/>
       </Input>
-      
       <Send>
      <button onClick={DataAdd}>send</button>
       </Send>
-      {/* <Clear>
-     <button onClick={DataClear}>clear</button>
-      </Clear> */}
-
-     {/* <h1>{Rname}</h1> */}
- 
      <h1>{R}</h1>
-     
-    </Division>
+   </div>
+    
   );
 }
 
 export default App;
 const Division=styled.div`
+display: flex;
+background-color: tomato;
   
 `
 const Clear=styled.section`
@@ -80,8 +83,13 @@ const Take=styled.input`
   
 `
 const Send=styled.section`
-  
+  font-size:'60px';
 `
 const Input=styled.section`
   
 `
+   {/* <Clear>
+     <button onClick={DataClear}>clear</button>
+      </Clear> */}
+
+     {/* <h1>{Rname}</h1> */}
